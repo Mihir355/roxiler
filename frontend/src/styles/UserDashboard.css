@@ -1,0 +1,183 @@
+/* UserDashboard.css */
+/* Base Styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  color: #2d3748;
+}
+
+/* User Navbar */
+.user-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.user-navbar .logo {
+  font-size: 1.8rem;
+}
+
+.user-navbar .company {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.user-navbar .section-title {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.user-navbar .right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-navbar .nav-item {
+  color: #718096;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.user-navbar .nav-item:hover {
+  color: #2563eb;
+}
+
+.user-navbar .logout-button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.user-navbar .logout-button:hover {
+  background: #1d4ed8;
+}
+
+/* Search Container */
+.search-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.store-search-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.store-search-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+/* Store Cards Container */
+.store-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Store Card */
+.store-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.store-card:hover {
+  transform: translateY(-2px);
+}
+
+.store-info h4 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.store-info p {
+  color: #718096;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Rating Section */
+.rate-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.star {
+  font-size: 1.5rem;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.star.filled {
+  color: #f59e0b;
+}
+
+.star:hover {
+  color: #fbbf24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-navbar {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .user-navbar .left {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .user-navbar .right {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-container {
+    padding: 1rem;
+  }
+
+  .store-cards-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-card {
+    padding: 1rem;
+  }
+}
