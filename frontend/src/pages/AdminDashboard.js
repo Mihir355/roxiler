@@ -13,7 +13,7 @@ const AdminDashboard = () => {
   const [stats, setStats] = useState({ users: 0, stores: 0, ratings: 0 });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/overview") // Change URL if needed
+    fetch("https://roxiler-be34.onrender.com/api/admin/overview") // Change URL if needed
       .then((res) => res.json())
       .then((data) => setStats(data))
       .catch((err) => console.error("Error fetching overview stats:", err));

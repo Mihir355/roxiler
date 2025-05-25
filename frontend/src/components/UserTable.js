@@ -5,7 +5,7 @@ const UserTable = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/users")
+    fetch("https://roxiler-be34.onrender.com/api/admin/users")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));

@@ -20,8 +20,8 @@ const AuthForm = () => {
     e.preventDefault();
 
     const url = isSignup
-      ? "http://localhost:5000/api/auth/signup"
-      : "http://localhost:5000/api/auth/login";
+      ? "https://roxiler-be34.onrender.com/api/auth/signup"
+      : "https://roxiler-be34.onrender.com/api/auth/login";
 
     const payload = isSignup
       ? form

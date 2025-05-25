@@ -23,7 +23,7 @@ const StoreOwnerDashboard = () => {
   useEffect(() => {
     const fetchStats = async () => {
       const res = await fetch(
-        `http://localhost:5000/api/store/stats/${ownerId}`
+        `https://roxiler-be34.onrender.com/api/store/stats/${ownerId}`
       );
       const data = await res.json();
       setAverage(data.average);
@@ -39,7 +39,7 @@ const StoreOwnerDashboard = () => {
 
     const fetchReviews = async () => {
       const res = await fetch(
-        `http://localhost:5000/api/store/reviews/${storeId}`
+        `https://roxiler-be34.onrender.com/api/store/reviews/${storeId}`
       );
       const data = await res.json();
       setReviews(data);
@@ -47,7 +47,7 @@ const StoreOwnerDashboard = () => {
 
     const fetchDistribution = async () => {
       const res = await fetch(
-        `http://localhost:5000/api/store/rating-distribution/${storeId}`
+        `https://roxiler-be34.onrender.com/api/store/rating-distribution/${storeId}`
       );
       const data = await res.json();
       setDistribution(data);

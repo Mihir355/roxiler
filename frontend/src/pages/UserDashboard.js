@@ -13,7 +13,7 @@ const UserDashboard = () => {
   const fetchStores = async () => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/user/stores-with-ratings/${userId}`
+        `https://roxiler-be34.onrender.com/api/user/stores-with-ratings/${userId}`
       );
       const data = await res.json();
       setStores(data);
@@ -33,11 +33,14 @@ const UserDashboard = () => {
   );
 
   const handleRatingUpdate = async (storeId, rating) => {
-    const res = await fetch("http://localhost:5000/api/user/review", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId: Number(userId), storeId, rating }),
-    });
+    const res = await fetch(
+      "https://roxiler-be34.onrender.com/api/user/review",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: Number(userId), storeId, rating }),
+      }
+    );
 
     if (res.ok) {
       const updated = stores.map((s) =>

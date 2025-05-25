@@ -5,7 +5,7 @@ const StoreTable = () => {
   const [stores, setStores] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/admin/stores")
+    fetch("https://roxiler-be34.onrender.com/api/admin/stores")
       .then((res) => res.json())
       .then((data) => setStores(data))
       .catch((err) => console.error("Error fetching stores:", err));

@@ -20,13 +20,16 @@ const AddUserForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/api/admin/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    const res = await fetch(
+      "https://roxiler-be34.onrender.com/api/admin/users",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
 
     if (res.ok) {
       alert("User created successfully!");
